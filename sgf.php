@@ -68,7 +68,7 @@ function igo_shortcode_sgf($atts, $content=null) {
 		)
 	);
 
-	if (!startsWith($background, "#")) {
+	if (!(strpos($background, '#') === 0)) {
 		$background = plugins_url('img/' . $background, __FILE__);
 	}
 
@@ -101,7 +101,7 @@ function igo_shortcode_sgf($atts, $content=null) {
 		}
 	}
 	$out .= "'";
-	$out .= " data-wgo='" . $content . "'></div>";
+	$out .= " data-wgo='" . str_replace(array("\r", "\r\n", "\n", "<br />", "<br/>"), '', $content) . "'></div>";
 	return $out;
 }
 
