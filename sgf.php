@@ -24,7 +24,7 @@ function igo_post_mime_types($post_mime_types) {
 add_action('wp_enqueue_scripts', 'igo_sgf_scripts');
 function igo_sgf_scripts() {
 	global $post;
-	if (has_shortcode($post->post_content, 'sgf')) {
+	if (has_shortcode($post->post_content, 'wgo-sgf')) {
 		wp_register_script('go_js', plugins_url('go.js', __FILE__), array('jquery'));
 		wp_register_script('wgo_js', plugins_url('wgo/wgo.min.js', __FILE__));
 		wp_register_script('wgo_js_player', plugins_url('wgo/wgo.player.min.js', __FILE__));
@@ -50,7 +50,7 @@ function igo_sgf_scripts() {
 //   float
 // ---------------------------------------------------------------------------------------------------------------------
 
-add_shortcode('sgf', 'igo_shortcode_sgf');
+add_shortcode('wgo-sgf', 'igo_shortcode_sgf');
 function igo_shortcode_sgf($atts, $content=null) {
 	extract(
 		shortcode_atts(
