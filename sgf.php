@@ -101,7 +101,7 @@ function igo_shortcode_sgf($atts, $content=null) {
 		}
 	}
 	$out .= "'";
-	$out .= " data-wgo='" . str_replace(array("\r", "\r\n", "\n", "<br />", "<br/>"), '', $content) . "'></div>";
+	$out .= " data-wgo='" . str_replace(array("\r", "\r\n", "\n", "<br />", "<br/>", "<wbr />", "<wbr/>"), '', $content) . "'></div>";
 	return $out;
 }
 
