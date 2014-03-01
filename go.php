@@ -10,6 +10,7 @@ License: MIT
 
 require_once(dirname(__FILE__) . '/egd.php');
 require_once(dirname(__FILE__) . '/sgf.php');
+require_once(dirname(__FILE__) . '/tablesorter.php');
 
 // ---------------------------------------------------------------------------------------------------------------------
 // Activation and deactivation hooks
