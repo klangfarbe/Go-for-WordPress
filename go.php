@@ -59,12 +59,24 @@ function igo_plugin_settings() {
 // ---------------------------------------------------------------------------------------------------------------------
 
 function igo_display_settings() {
+		wp_register_style('go-css', plugins_url('go.css', __FILE__));
+		wp_enqueue_style('go-css');
+	$images = "";
+	for($i = 1; $i < 7; $i++) {
+		$f = "wood" . $i . ".jpg";
+		if($f == get_option('igo_settings_background')) {
+ 			$images .= '<div class="wgo-bg-img"><input type="radio" name="igo_settings_background" value="' . $f . '" checked><img src="' . plugins_url('/img/' . $f, __FILE__) . '"/></input></div>';
+		} else {
+			$images .= '<div class="wgo-bg-img"><input type="radio" name="igo_settings_background" value="' . $f . '"><img src="' . plugins_url('/img/' .  $f, __FILE__) . '"/></input></div>'; 
+		}
+	}
+	echo get_option('igo_settings_background');
 	$html = '
 	</pre>
 	<div class="wrap">
 		<form action="options.php" method="post" name="options">
 		<h2>Kifu Layout</h2>' . wp_nonce_field('update-options') .
-		'<table class="form-table" style="max-width: 400px">
+		'<table class="form-table" >
 			<tbody>
 				<tr>
 					<td scope="row" align="left">
@@ -82,9 +94,7 @@ function igo_display_settings() {
 					<td scope="row" align="left">
  						<label>Background image</label>
  					</td>
- 					<td scope="row" align="left">
- 						<input type="text" name="igo_settings_background" value="' . get_option('igo_settings_background') . '"/>
- 					</td>
+ 					<td scope="row" align="left">' . $images .  '</td>
 				</tr>
 				<tr>
 					<td scope="row" align="left">
@@ -112,8 +122,6 @@ function igo_display_settings() {
 				</tr>
 			</tbody>
 		</table>
-		<h2>European Go Database Settings</h2>
-
  		<input type="hidden" name="action" value="update" />
  		<input type="hidden" name="page_options" value="igo_settings_background,igo_settings_line_width,igo_settings_max_width,igo_settings_default_width,igo_settings_stone_handler" />
  		<input type="submit" name="Submit" value="Update" />

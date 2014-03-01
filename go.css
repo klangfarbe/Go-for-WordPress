@@ -2,3 +2,13 @@ table.wgo-player-table {
 	max-width: 750px;
 	margin: 0 auto;
 }
+
+.wgo-bg-img {
+	display: inline-block;
+	margin: 0 10px 10px 0;
+	width: 120px;
+}
+
+.wgo-bg-img img {
+	border: 1px solid black;
+}
