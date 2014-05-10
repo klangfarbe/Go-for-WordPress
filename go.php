@@ -71,9 +71,7 @@ function igo_display_settings() {
 		}
 	}
 	echo get_option('igo_settings_background');
-	$html = '
-	</pre>
-	<div class="wrap">
+	$html = '<div class="wrap">
 		<form action="options.php" method="post" name="options">
 		<h2>Kifu Layout</h2>' . wp_nonce_field('update-options') .
 		'<table class="form-table" >
@@ -126,8 +124,7 @@ function igo_display_settings() {
  		<input type="hidden" name="page_options" value="igo_settings_background,igo_settings_line_width,igo_settings_max_width,igo_settings_default_width,igo_settings_stone_handler" />
  		<input type="submit" name="Submit" value="Update" />
  		</form>
- 	</div>
-	<pre>';
+ 	</div>';
     echo $html;
 }
 ?>
