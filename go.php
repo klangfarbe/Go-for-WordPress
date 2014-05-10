@@ -23,6 +23,7 @@ function igo_activation() {
 	add_option('igo_settings_default_width', '90%');
 	add_option('igo_settings_max_width', '900px');
 	add_option('igo_settings_stone_handler', 'NORMAL');
+	add_option('igo_settings_i18n', 'de');
 }
 
 // ---------------------------------------------------------------------------------------------------------------------
@@ -34,6 +35,7 @@ function igo_deactivation() {
 	delete_option('igo_settings_default_width');
 	delete_option('igo_settings_max_width');
 	delete_option('igo_settings_stone_handler');
+	delete_option('igo_settings_i18n');
 }
 
 // ---------------------------------------------------------------------------------------------------------------------
@@ -118,10 +120,24 @@ function igo_display_settings() {
 						<input type="text" name="igo_settings_max_width" value="' . get_option('igo_settings_max_width') . '"/>
 					</td>
 				</tr>
+				<tr>
+					<td scope="row" align="left">
+                                                <label>Language</label>        
+                                        </td>
+                                        <td scope="row" align="left">
+                                                <select name="igo_settings_i18n">
+                                                        <option value="en"' . (get_option('igo_settings_i18n') == 'en' ? 'selected' : '') . '>English (Default)</option>
+                                                        <option value="de"' . (get_option('igo_settings_i18n') == 'de' ? 'selected' : '') . ' >German</option>
+                                                        <option value="it"' . (get_option('igo_settings_i18n') == 'it' ? 'selected' : '') . '>Italien</option>
+                                                        <option value="cz"' . (get_option('igo_settings_i18n') == 'cz' ? 'selected' : '') . '>Czech</option>   
+                                                        <option value="cn"' . (get_option('igo_settings_i18n') == 'cn' ? 'selected' : '') . '>Chinese (Simplified)</option>    
+                                                </select>
+                                        </td>
+				</tr>
 			</tbody>
 		</table>
  		<input type="hidden" name="action" value="update" />
- 		<input type="hidden" name="page_options" value="igo_settings_background,igo_settings_line_width,igo_settings_max_width,igo_settings_default_width,igo_settings_stone_handler" />
+ 		<input type="hidden" name="page_options" value="igo_settings_background,igo_settings_line_width,igo_settings_max_width,igo_settings_default_width,igo_settings_stone_handler,igo_settings_i18n" />
  		<input type="submit" name="Submit" value="Update" />
  		</form>
  	</div>';

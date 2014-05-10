@@ -28,9 +28,11 @@ function igo_sgf_scripts() {
 		wp_register_script('go_js', plugins_url('go.js', __FILE__), array('jquery'));
 		wp_register_script('wgo_js', plugins_url('wgo/wgo.min.js', __FILE__));
 		wp_register_script('wgo_js_player', plugins_url('wgo/wgo.player.min.js', __FILE__));
+		wp_register_script('wgo_js_player_i18n', plugins_url('wgo/i18n/i18n.'.get_option('igo_settings_i18n').'.js', __FILE__));
 		wp_enqueue_script('go_js');
 		wp_enqueue_script('wgo_js');
 		wp_enqueue_script('wgo_js_player');
+		wp_enqueue_script('wgo_js_player_i18n');
 
 		wp_register_style('wgo_player', plugins_url('wgo/wgo.player.css', __FILE__));
 		wp_enqueue_style('wgo_player');
