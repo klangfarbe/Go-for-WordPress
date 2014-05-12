@@ -1,7 +1,7 @@
 <?php
 /* Plugin Name: Go for Wordpress
 Plugin URI: http://guzumi.de/
-Description: A plugin for displaying SGF files using the <a href=http://wgo.waltheri.net>wgo.js library</a> and getting player data from the European Go Database. It adds a new shortcode <strong>[sgf]</strong> to the editor which can be used to embed the given SGF.
+Description: A plugin for displaying SGF files using the <a href=http://wgo.waltheri.net>wgo.js library</a> and getting player data from the European Go Database. It adds a new shortcode <strong>[wgo_sgf]</strong> to the editor which can be used to embed the given SGF.
 Version: 0.1
 Author: Christian Mocek
 Author URI: http://github.com/klangfarbe
