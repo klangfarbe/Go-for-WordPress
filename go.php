@@ -1,12 +1,14 @@
 <?php
-/* Plugin Name: Go for Wordpress
-Plugin URI: http://guzumi.de/
-Description: A plugin for displaying SGF files using the <a href=http://wgo.waltheri.net>wgo.js library</a> and getting player data from the European Go Database. It adds a new shortcode <strong>[wgo_sgf]</strong> to the editor which can be used to embed the given SGF.
-Version: 0.1
-Author: Christian Mocek
-Author URI: http://github.com/klangfarbe
-License: MIT
-*/
+/** Plugin Name: Go for Wordpress
+ * Plugin URI: http://guzumi.de/
+ * Description: A plugin for displaying SGF files using the <a href=http://wgo.waltheri.net>wgo.js library</a> and getting player data from the European Go Database. It adds a new shortcode <strong>[wgo_sgf]</strong> to the editor which can be used to embed the given SGF.
+ *Version: 0.1
+ * Author: Christian Mocek
+ * Author URI: http://github.com/klangfarbe
+ * License: MIT
+ * Text Domain: igo-lang
+ * Domain Path: /languages
+ */
 
 require_once(dirname(__FILE__) . '/egd.php');
 require_once(dirname(__FILE__) . '/sgf.php');
@@ -23,7 +25,7 @@ function igo_activation() {
 	add_option('igo_settings_default_width', '90%');
 	add_option('igo_settings_max_width', '900px');
 	add_option('igo_settings_stone_handler', 'NORMAL');
-	add_option('igo_settings_i18n', 'de');
+	add_option('igo_settings_i18n', 'en');
 }
 
 // ---------------------------------------------------------------------------------------------------------------------
@@ -58,8 +60,16 @@ function igo_plugin_settings() {
 	add_submenu_page('themes.php', 'Wordpress Go', 'Wordpress Go', 'administrator', 'igo_settings', 'igo_display_settings');
 }
 
+/**
+ * Load plugin textdomain.
+ */
+function igo_load_textdomain() {
+  load_plugin_textdomain( 'igo-lang', false, dirname( plugin_basename( __FILE__ ) ) . '/languages/' ); 
+}
+
 // ---------------------------------------------------------------------------------------------------------------------
 
+add_action( 'plugins_loaded', 'igo_load_textdomain' );
 function igo_display_settings() {
 		wp_register_style('go-css', plugins_url('go.css', __FILE__));
 		wp_enqueue_style('go-css');
@@ -75,30 +85,30 @@ function igo_display_settings() {
 	echo get_option('igo_settings_background');
 	$html = '<div class="wrap">
 		<form action="options.php" method="post" name="options">
-		<h2>Kifu Layout</h2>' . wp_nonce_field('update-options') .
+		<h2>' .__('Kifu Layout', 'igo-lang'). '</h2>' . wp_nonce_field('update-options') .
 		'<table class="form-table" >
 			<tbody>
 				<tr>
 					<td scope="row" align="left">
- 						<label>Stone design</label>
+ 						<label>' .__('Stone design', 'igo-lang') . '</label>
  					</td>
  					<td scope="row" align="left">
 						<select name="igo_settings_stone_handler">
-							<option value="NORMAL"' . (get_option('igo_settings_stone_handler') == 'NORMAL' ? 'selected' : '') . '>Normal</option>
-							<option value="GLOW"' . (get_option('igo_settings_stone_handler') == 'GLOW' ? 'selected' : '') . '>Glow</option>
-							<option value="MONO"' . (get_option('igo_settings_stone_handler') == 'MONO' ? 'selected' : '') . '>Monochrome</option>
+							<option value="NORMAL"' . (get_option('igo_settings_stone_handler') == 'NORMAL' ? 'selected' : '') . '>' .__('Normal', 'igo-lang'). '</option>
+							<option value="GLOW"' . (get_option('igo_settings_stone_handler') == 'GLOW' ? 'selected' : '') . '>' .__('Glow', 'igo-lang'). '</option>
+							<option value="MONO"' . (get_option('igo_settings_stone_handler') == 'MONO' ? 'selected' : '') . '>' .__('Monochrome', 'igo-lang'). '</option>
 						</select>
 					</td>
 				</tr>
 				<tr>
 					<td scope="row" align="left">
- 						<label>Background image</label>
+ 						<label>' . __('Background image', 'igo-lang') . '</label>
  					</td>
  					<td scope="row" align="left">' . $images .  '</td>
 				</tr>
 				<tr>
 					<td scope="row" align="left">
-						<label>Line width</label>
+						<label>' . __('Line width', 'igo-lang') .'</label>
 					</td>
  					<td scope="row" align="left">
 						<input type="text" name="igo_settings_line_width" value="' . get_option('igo_settings_line_width') . '"/>
@@ -106,7 +116,7 @@ function igo_display_settings() {
 				</tr>
 				<tr>
 					<td scope="row" align="left">
-						<label>Default Kifu width</label>
+						<label>' . __('Default Kifu width', 'igo-lang') .'</label>
 					</td>
  					<td scope="row" align="left">
 						<input type="text" name="igo_settings_default_width" value="' . get_option('igo_settings_default_width') . '"/>
@@ -114,7 +124,7 @@ function igo_display_settings() {
 				</tr>
 				<tr>
 					<td scope="row" align="left">
-						<label>Maximum Kifu width</label>
+						<label>' .__('Maximum Kifu width', 'igo-lang') .'</label>
 					</td>
  					<td scope="row" align="left">
 						<input type="text" name="igo_settings_max_width" value="' . get_option('igo_settings_max_width') . '"/>
@@ -122,15 +132,16 @@ function igo_display_settings() {
 				</tr>
 				<tr>
 					<td scope="row" align="left">
-                                                <label>Language</label>        
+                                                <label>' .__('Language', 'igo-lang') .'</label>        
                                         </td>
                                         <td scope="row" align="left">
                                                 <select name="igo_settings_i18n">
-                                                        <option value="en"' . (get_option('igo_settings_i18n') == 'en' ? 'selected' : '') . '>English (Default)</option>
-                                                        <option value="de"' . (get_option('igo_settings_i18n') == 'de' ? 'selected' : '') . ' >German</option>
-                                                        <option value="it"' . (get_option('igo_settings_i18n') == 'it' ? 'selected' : '') . '>Italien</option>
-                                                        <option value="cz"' . (get_option('igo_settings_i18n') == 'cz' ? 'selected' : '') . '>Czech</option>   
-                                                        <option value="cn"' . (get_option('igo_settings_i18n') == 'cn' ? 'selected' : '') . '>Chinese (Simplified)</option>    
+                                                        <option value="en"' . (get_option('igo_settings_i18n') == 'en' ? 'selected' : '') . '>' . __('English (Default)', 'igo-lang'). '</option>
+                                                        <option value="de"' . (get_option('igo_settings_i18n') == 'de' ? 'selected' : '') . '>' . __('German', 'igo-lang'). '</option>
+							<option value="fr"' . (get_option('igo_settings_i18n') == 'fr' ? 'selected' : '') . '>' . __('French', 'igo-lang'). '</option>
+                                                        <option value="it"' . (get_option('igo_settings_i18n') == 'it' ? 'selected' : '') . '>' . __('Italien', 'igo-lang'). '</option>
+                                                        <option value="cs"' . (get_option('igo_settings_i18n') == 'cs' ? 'selected' : '') . '>' . __('Czech', 'igo-lang'). '</option>   
+                                                        <option value="zh"' . (get_option('igo_settings_i18n') == 'zh' ? 'selected' : '') . '>' . __('Chinese (Simplified)', 'igo-lang'). '</option>    
                                                 </select>
                                         </td>
 				</tr>

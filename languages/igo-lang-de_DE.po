@@ -1,0 +1,156 @@
+msgid ""
+msgstr ""
+"Project-Id-Version: Go for Wordpress v0.1\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: \n"
+"PO-Revision-Date: 2014-05-12 13:13:27+0000\n"
+"Last-Translator: \n"
+"Language-Team: \n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=2; plural=n != 1;\n"
+"X-Generator: CSL v1.x\n"
+"X-Poedit-Language: German\n"
+"X-Poedit-Country: GERMANY\n"
+"X-Poedit-SourceCharset: utf-8\n"
+"X-Poedit-KeywordsList: __;_e;__ngettext:1,2;_n:1,2;__ngettext_noop:1,2;_n_noop:1,2;_c,_nc:4c,1,2;_x:1,2c;_ex:1,2c;_nx:4c,1,2;_nx_noop:4c,1,2;\n"
+"X-Poedit-Basepath: \n"
+"X-Poedit-Bookmarks: \n"
+"X-Poedit-SearchPath-0: .\n"
+"X-Textdomain-Support: yes"
+
+#: go.php:105
+#@ igo-lang
+msgid "Background image"
+msgstr "Hintergrundbild"
+
+#: sgf.php:15
+#@ igo-lang
+msgid "Kifus"
+msgstr "Kifus"
+
+#: sgf.php:16
+#@ igo-lang
+msgid "Manage Kifus"
+msgstr "Kifus verwalten"
+
+#: sgf.php:17
+#, php-format
+#@ igo-lang
+msgid "Kifu <span class=\"count\">(%s)</span>"
+msgid_plural "Kifus <span class=\"count\">(%s)</span>"
+msgstr[0] ""
+msgstr[1] ""
+
+#. translators: plugin header field 'Name'
+#: go.php:0
+#@ igo-lang
+msgid "Go for Wordpress"
+msgstr "Go for Wordpress"
+
+#. translators: plugin header field 'PluginURI'
+#: go.php:0
+#@ igo-lang
+msgid "http://guzumi.de/"
+msgstr "http://guzumi.de/"
+
+#. translators: plugin header field 'Description'
+#: go.php:0
+#@ igo-lang
+msgid "A plugin for displaying SGF files using the <a href=http://wgo.waltheri.net>wgo.js library</a> and getting player data from the European Go Database. It adds a new shortcode <strong>[wgo_sgf]</strong> to the editor which can be used to embed the given SGF."
+msgstr "Ein Plugin zur Darstellung von SGF-Dateien mit Hilfe der <a href=http://wgo.waltheri.net>wgo.js</a> Library und um Spielerdaten aus der European Go Database auszulesen. Es fügt dem Editor den neuen Shortcode <strong>[wgo_sgf]</strong> hinzu, mit dem man eine SGF-Datei in einem Beitrag darstellen kann."
+
+#. translators: plugin header field 'Author'
+#: go.php:0
+#@ igo-lang
+msgid "Christian Mocek"
+msgstr "Christian Mocek"
+
+#. translators: plugin header field 'AuthorURI'
+#: go.php:0
+#@ igo-lang
+msgid "http://github.com/klangfarbe"
+msgstr "http://github.com/klangfarbe"
+
+#. translators: plugin header field 'Version'
+#: go.php:0
+#@ igo-lang
+msgid "0.1"
+msgstr "0.1"
+
+#: go.php:88
+#@ igo-lang
+msgid "Kifu Layout"
+msgstr "Layout des Kifus"
+
+#: go.php:93
+#@ igo-lang
+msgid "Stone design"
+msgstr "Design der Steine"
+
+#: go.php:97
+#@ igo-lang
+msgid "Normal"
+msgstr "Normal"
+
+#: go.php:98
+#@ igo-lang
+msgid "Glow"
+msgstr "Leuchten"
+
+#: go.php:99
+#@ igo-lang
+msgid "Monochrome"
+msgstr "Monochrome"
+
+#: go.php:111
+#@ igo-lang
+msgid "Line width"
+msgstr "Linienstärke"
+
+#: go.php:119
+#@ igo-lang
+msgid "Default Kifu width"
+msgstr "Standardbreite des Kifus"
+
+#: go.php:127
+#@ igo-lang
+msgid "Maximum Kifu width"
+msgstr "Maximale Breite des Kifus"
+
+#: go.php:135
+#@ igo-lang
+msgid "Language"
+msgstr "Sprache"
+
+#: go.php:139
+#@ igo-lang
+msgid "English (Default)"
+msgstr "Englisch (Standard)"
+
+#: go.php:140
+#@ igo-lang
+msgid "German"
+msgstr "Deutsch"
+
+#: go.php:141
+#@ igo-lang
+msgid "French"
+msgstr "Französisch"
+
+#: go.php:142
+#@ igo-lang
+msgid "Italien"
+msgstr "Italienisch"
+
+#: go.php:143
+#@ igo-lang
+msgid "Czech"
+msgstr "Tschechisch"
+
+#: go.php:144
+#@ igo-lang
+msgid "Chinese (Simplified)"
+msgstr "Chinesisch (Vereinfacht)"
+

@@ -12,8 +12,8 @@ function igo_mimetypes($mime_types) {
 add_filter('post_mime_types', 'igo_post_mime_types');
 function igo_post_mime_types($post_mime_types) {
 	$post_mime_types['text/sgf'] = array(
-		__('Kifus'),
-		__('Manage Kifus'),
+		__('Kifus', 'igo-lang'),
+		__('Manage Kifus', 'igo-lang'),
 		_n_noop('Kifu <span class="count">(%s)</span>', 'Kifus <span class="count">(%s)</span>')
 	);
 	return $post_mime_types;
