@@ -26,6 +26,7 @@ function igo_activation() {
 	add_option('igo_settings_max_width', '900px');
 	add_option('igo_settings_stone_handler', 'NORMAL');
 	add_option('igo_settings_i18n', 'en');
+	add_option('igo_settings_min_width_for_float', '-1');
 }
 
 // ---------------------------------------------------------------------------------------------------------------------
@@ -38,6 +39,7 @@ function igo_deactivation() {
 	delete_option('igo_settings_max_width');
 	delete_option('igo_settings_stone_handler');
 	delete_option('igo_settings_i18n');
+	delete_option('igo_settings_min_width_for_float');
 }
 
 // ---------------------------------------------------------------------------------------------------------------------
@@ -82,7 +84,7 @@ function igo_display_settings() {
 			$images .= '<div class="wgo-bg-img"><input type="radio" name="igo_settings_background" value="' . $f . '"><img src="' . plugins_url('/img/' .  $f, __FILE__) . '"/></input></div>';
 		}
 	}
-	echo get_option('igo_settings_background');
+
 	$html = '<div class="wrap">
 		<form action="options.php" method="post" name="options">
 		<h2>' .__('Kifu Layout', 'igo-lang'). '</h2>' . wp_nonce_field('update-options') .
@@ -132,6 +134,14 @@ function igo_display_settings() {
 				</tr>
 				<tr>
 					<td scope="row" align="left">
+						<label>' . __('Disable Kifu floating if screen width is smaller than (px)', 'igo-lang') .'</label>
+					</td>
+ 					<td scope="row" align="left">
+						<input type="text" name="igo_settings_min_width_for_float" value="' . get_option('igo_settings_min_width_for_float') . '"/>
+					</td>
+				</tr>
+				<tr>
+					<td scope="row" align="left">
 						<label>' .__('Language', 'igo-lang') .'</label>
 					</td>
 					<td scope="row" align="left">
@@ -148,7 +158,7 @@ function igo_display_settings() {
 			</tbody>
 		</table>
  		<input type="hidden" name="action" value="update" />
- 		<input type="hidden" name="page_options" value="igo_settings_background,igo_settings_line_width,igo_settings_max_width,igo_settings_default_width,igo_settings_stone_handler,igo_settings_i18n" />
+ 		<input type="hidden" name="page_options" value="igo_settings_background,igo_settings_line_width,igo_settings_max_width,igo_settings_default_width,igo_settings_stone_handler,igo_settings_i18n,igo_settings_min_width_for_float" />
  		<input type="submit" name="Submit" value="Update" />
  		</form>
  	</div>';

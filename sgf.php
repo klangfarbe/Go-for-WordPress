@@ -36,6 +36,10 @@ function igo_sgf_scripts() {
 
 		wp_register_style('wgo_player', plugins_url('wgo/wgo.player.css', __FILE__));
 		wp_enqueue_style('wgo_player');
+
+		$data = array('float_min_width' => get_option('igo_settings_min_width_for_float'));
+
+		wp_localize_script('sgf_js', 'plugin_options', $data);
 	}
 }
 

@@ -1,9 +1,9 @@
 msgid ""
 msgstr ""
-"Project-Id-Version: Go for Wordpress v0.1\n"
+"Project-Id-Version: Go for Wordpress v0.2\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: \n"
-"PO-Revision-Date: 2014-05-12 13:13:27+0000\n"
+"PO-Revision-Date: 2014-05-13 16:57+0100\n"
 "Last-Translator: \n"
 "Language-Team: \n"
 "MIME-Version: 1.0\n"
@@ -118,6 +118,11 @@ msgstr "Standardbreite des Kifus"
 #@ igo-lang
 msgid "Maximum Kifu width"
 msgstr "Maximale Breite des Kifus"
+
+#@ igo-lang
+#: go.php:137
+msgid "Disable Kifu floating if screen width is smaller than (px)"
+msgstr "Ignoriere Kifu-Ausrichtung wenn Fensterbreite kleiner (px)"
 
 #: go.php:135
 #@ igo-lang
