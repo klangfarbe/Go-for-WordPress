@@ -1,3 +1,5 @@
+jQuery.noConflict();
+
 (function($) {
 	$(window).resize(function() {
 		if ($(window).width() < 500) {

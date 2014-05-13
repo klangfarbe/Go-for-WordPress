@@ -1,3 +1,5 @@
+jQuery.noConflict();
+
 jQuery(document).ready(function($) {
     $.tablesorter.addParser({
 	id: 'go-ranks',
