@@ -13,16 +13,16 @@ Download the package and extract it to you Wordpress plugin folder.
 
 You can load a Kifu by adding the URL to the sgf file. Please note that the file must be on the same server as the WordPress installation.
 
-    [wgo_sgf]http://url/to/file.sgf[/wgo_sgf]
+    [wgo]http://url/to/file.sgf[/wgo]
 
 Or you can put the sgf text directly into the shortcode:
 
-    [wgo_sgf static="true" limit="0,9,12,0" maxwidth="250px"]
+    [wgo static="true" limit="0,9,12,0" maxwidth="250px"]
     (;GM[1]
      AW[fc][hd][ge][he]
      AB[dc][ic][id][ce][fe][gf]
      LB[hd:1][id:2][ge:3][he:5][gf:4]TR[ff])
-    [/wgo_sgf]
+    [/wgo]
 
 #### Parameters
 

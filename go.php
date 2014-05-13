@@ -1,7 +1,7 @@
 <?php
 /** Plugin Name: Go for Wordpress
  * Plugin URI: http://guzumi.de/
- * Description: A plugin for displaying SGF files using the <a href=http://wgo.waltheri.net>wgo.js library</a> and getting player data from the European Go Database. It adds a new shortcode <strong>[wgo_sgf]</strong> to the editor which can be used to embed the given SGF.
+ * Description: A plugin for displaying SGF files using the <a href=http://wgo.waltheri.net>wgo.js library</a> and getting player data from the European Go Database. It adds a new shortcode <strong>[wgo]</strong> to the editor which can be used to embed the given SGF.
  * Version: 0.2
  * Author: Christian Mocek
  * Author URI: http://github.com/klangfarbe
@@ -47,7 +47,7 @@ function igo_deactivation() {
 add_action('wp_enqueue_scripts', 'igo_egd_scripts');
 function igo_egd_scripts() {
 	global $post;
-	if (has_shortcode($post->post_content, 'egd') || has_shortcode($post->post_content, 'wgo_sgf')) {
+	if (has_shortcode($post->post_content, 'egd') || has_shortcode($post->post_content, 'wgo')) {
 		wp_register_style('go-css', plugins_url('go.css', __FILE__));
 		wp_enqueue_style('go-css');
 	}

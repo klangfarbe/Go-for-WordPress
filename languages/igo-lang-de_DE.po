@@ -58,8 +58,8 @@ msgstr "http://guzumi.de/"
 #. translators: plugin header field 'Description'
 #: go.php:0
 #@ igo-lang
-msgid "A plugin for displaying SGF files using the <a href=http://wgo.waltheri.net>wgo.js library</a> and getting player data from the European Go Database. It adds a new shortcode <strong>[wgo_sgf]</strong> to the editor which can be used to embed the given SGF."
-msgstr "Ein Plugin zur Darstellung von SGF-Dateien mit Hilfe der <a href=http://wgo.waltheri.net>wgo.js</a> Library und um Spielerdaten aus der European Go Database auszulesen. Es fügt dem Editor den neuen Shortcode <strong>[wgo_sgf]</strong> hinzu, mit dem man eine SGF-Datei in einem Beitrag darstellen kann."
+msgid "A plugin for displaying SGF files using the <a href=http://wgo.waltheri.net>wgo.js library</a> and getting player data from the European Go Database. It adds a new shortcode <strong>[wgo]</strong> to the editor which can be used to embed the given SGF."
+msgstr "Ein Plugin zur Darstellung von SGF-Dateien mit Hilfe der <a href=http://wgo.waltheri.net>wgo.js</a> Library und um Spielerdaten aus der European Go Database auszulesen. Es fügt dem Editor den neuen Shortcode <strong>[wgo]</strong> hinzu, mit dem man eine SGF-Datei in einem Beitrag darstellen kann."
 
 #. translators: plugin header field 'Author'
 #: go.php:0
