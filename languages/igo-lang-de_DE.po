@@ -1,6 +1,6 @@
 msgid ""
 msgstr ""
-"Project-Id-Version: Go for Wordpress v0.2\n"
+"Project-Id-Version: Go, Baduk, Weiqi v0.2\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: \n"
 "PO-Revision-Date: 2014-05-13 16:57+0100\n"
@@ -46,8 +46,8 @@ msgstr[1] ""
 #. translators: plugin header field 'Name'
 #: go.php:0
 #@ igo-lang
-msgid "Go for Wordpress"
-msgstr "Go for Wordpress"
+msgid "Go, Baduk, Weiqi"
+msgstr "Go, Baduk, Weiqi"
 
 #. translators: plugin header field 'PluginURI'
 #: go.php:0

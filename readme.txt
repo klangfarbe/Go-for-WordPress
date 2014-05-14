@@ -1,4 +1,4 @@
-=== Go for WordPress ===
+=== Go, Baduk, Weiqi ===
 Contributors: klangfarbe
 Tags: go, baduk, weiqi, sgf, kifu, goban, wgo.js, responsive
 Requires at least: 3.0
