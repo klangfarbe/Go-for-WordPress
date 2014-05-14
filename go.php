@@ -1,6 +1,6 @@
 <?php
 /** Plugin Name: Go for Wordpress
- * Plugin URI: http://guzumi.de/
+ * Plugin URI: http://guzumi.de/wgo-plugin
  * Description: A plugin for displaying SGF files using the <a href=http://wgo.waltheri.net>wgo.js library</a> and getting player data from the European Go Database. It adds a new shortcode <strong>[wgo]</strong> to the editor which can be used to embed the given SGF.
  * Version: 0.2
  * Author: Christian Mocek
