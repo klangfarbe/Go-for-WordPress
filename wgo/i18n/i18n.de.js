@@ -14,7 +14,7 @@ WGo.i18n[WGo.lang] = {
 	"AN": "Notizen",
 	"CP": "Copyright",
 	"GC": "Spielkommentare",
-	"GN": "Name des Spiels",
+	"GN": "Partie",
 	"ON": "Fuseki",
 	"OT": "Verlängerung",
 	"TM": "Bedenkzeit",
