@@ -59,7 +59,7 @@ function igo_egd_scripts() {
 
 add_action('admin_menu', 'igo_plugin_settings');
 function igo_plugin_settings() {
-	add_submenu_page('themes.php', 'Wordpress Go', 'Wordpress Go', 'administrator', 'igo_settings', 'igo_display_settings');
+	add_submenu_page('themes.php', 'Go, Baduk, Weiqi', 'Go, Baduk, Weiqi', 'administrator', 'igo_settings', 'igo_display_settings');
 }
 
 /**
