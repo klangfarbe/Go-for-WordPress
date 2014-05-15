@@ -4,7 +4,7 @@ Tags: go, baduk, weiqi, sgf, kifu, goban, wgo.js, responsive
 Requires at least: 3.0
 Tested up to: 3.9.1
 License: MIT
-Stable tag: trunk
+Stable tag: 0.2
 
 Display SGF files with a responsive layout on your WordPress site and access
 the European Go Database for player information.
