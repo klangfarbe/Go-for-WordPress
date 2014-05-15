@@ -96,17 +96,19 @@ function igo_shortcode_sgf($atts, $content=null) {
 		$out .= " data-wgo-layout='top: [], right: [], left: [], bottom: []'";
 	}
 
-
+	$class = "";
 	$out .= " style='width: " . $width . "; max-width: " . $maxwidth;
 	if ($float != null) {
 		if ($float == "left") {
 			$out .= "; float: left";
+			$class = "class='wgo-player-floating-left'";
 		}
 		if ($float == "right") {
 			$out .= "; float: right";
+			$class = "class='wgo-player-floating-right'";
 		}
 	}
-	$out .= "'";
+	$out .= "' " . $class;
 	$out .= " data-wgo='" . str_replace(array("\r", "\r\n", "\n", "<br />", "<br/>", "<wbr />", "<wbr/>"), '', $content) . "'></div>";
 	return $out;
 }
