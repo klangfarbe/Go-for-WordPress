@@ -91,11 +91,6 @@ function igo_shortcode_sgf($atts, $content=null) {
 		$out .= " data-wgo-move='" . $move . "'";
 	}
 
-	if ($static != null) {
-		$out .= " data-wgo-enablewheel='false' data-wgo-enablekeys='false'";
-		$out .= " data-wgo-layout='top: [], right: [], left: [], bottom: []'";
-	}
-
 	$class = "";
 	$out .= " style='width: " . $width . "; max-width: " . $maxwidth;
 	if ($float != null) {
@@ -109,7 +104,13 @@ function igo_shortcode_sgf($atts, $content=null) {
 		}
 	}
 	$out .= "' " . $class;
-	$out .= " data-wgo='" . str_replace(array("\r", "\r\n", "\n", "<br />", "<br/>", "<wbr />", "<wbr/>"), '', $content) . "'></div>";
+
+	if ($static != null) {
+		$out .= " data-wgo-diagram='";
+	} else {
+		$out .= " data-wgo='";
+	}
+	$out .= str_replace(array("\r", "\r\n", "\n", "<br />", "<br/>", "<wbr />", "<wbr/>"), '', $content) . "'></div>";
 	return $out;
 }
 
