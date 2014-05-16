@@ -111,7 +111,7 @@ echo "Changing directory to trunk"
 cd $SVNPATH/trunk/
 
 # only commit if there are changes
-if [ -z `svn status -q` ]; then
+if [ -z "`svn status`" ]; then
 	echo "No changes found for this release found. Existing..."
 	cleanup
 	exit 1
