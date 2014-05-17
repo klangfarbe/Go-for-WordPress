@@ -20,6 +20,11 @@ msgstr ""
 "X-Poedit-SearchPath-0: .\n"
 "X-Textdomain-Support: yes"
 
+#: go.php:51
+#@ igo-lang
+msgid "Settings"
+msgstr "Einstellungen"
+
 #: go.php:105
 #@ igo-lang
 msgid "Background image"

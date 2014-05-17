@@ -45,6 +45,16 @@ function igo_deactivation() {
 
 // ---------------------------------------------------------------------------------------------------------------------
 
+add_filter( 'plugin_action_links_' . plugin_basename(__FILE__), 'igo_plugin_settings_link');
+function igo_plugin_settings_link($links) {
+	$url = get_admin_url() . '/themes.php?page=igo_settings';
+	$settings_link = '<a href="' . $url . '">' . __('Settings', 'igo-lang') . '</a>';
+	array_unshift($links, $settings_link);
+	return $links;
+}
+
+// ---------------------------------------------------------------------------------------------------------------------
+
 add_action('wp_enqueue_scripts', 'igo_egd_scripts');
 function igo_egd_scripts() {
 	global $post;
