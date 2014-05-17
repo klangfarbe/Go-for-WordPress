@@ -1,10 +1,10 @@
 === Go, Baduk, Weiqi ===
 Contributors: klangfarbe
 Tags: go, baduk, weiqi, sgf, kifu, goban, wgo.js, responsive
-Requires at least: 3.0
+Requires at least: 3.6
 Tested up to: 3.9.1
 License: MIT
-Stable tag: 0.2
+Stable tag: 0.3
 
 Display SGF files with a responsive layout on your WordPress site and access
 the European Go Database for player information.
@@ -31,6 +31,11 @@ actually used on a site. Nevertheless it is not possible to use both plugins
 in the same post.
 
 == Changelog ==
+
+= 0.3 =
+* Fixed embedding the Javascript for pages on front page
+* Added new version of wgo.js
+* For static diagrams the last made move in the SGF is not marked with a circle anymore
 
 = 0.2 =
 First public release
