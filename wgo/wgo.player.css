@@ -33,6 +33,9 @@
 	height: 100%;
 	line-height: normal;
 	font-size: 16px;
+	position: relative;
+	-webkit-tap-highlight-color: rgba(0,0,0,0);
+	-webkit-tap-highlight-color: transparent; /* For some Androids */
 }
 
 .wgo-player-main:after {
@@ -82,6 +85,13 @@
 
 .wgo-board {
 	margin: 0 auto;
+    background-color: #CEB053;
+    border-top: #F0E7A7 solid 1px;
+    border-right: #D1A974 solid 1px;
+    border-left: #CCB467 solid 1px;
+    border-bottom: #665926 solid 3px;
+    /*border-right: #665926 solid 3px;*/
+    border-radius: 3px;
 }
 
 /*--- /Board --------------------------------------------------------------------------*/
