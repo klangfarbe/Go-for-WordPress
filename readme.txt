@@ -2,7 +2,7 @@
 Contributors: klangfarbe
 Tags: go, baduk, weiqi, sgf, kifu, goban, wgo.js, responsive
 Requires at least: 3.6
-Tested up to: 4.4
+Tested up to: 4.3.1
 License: MIT
 Stable tag: 0.5
 
@@ -33,6 +33,7 @@ in the same post.
 == Changelog ==
 
 = 0.5 =
+* Fixed CSS problems with the default WordPress themes
 * Updated wgo.js library
 
 = 0.4 =
