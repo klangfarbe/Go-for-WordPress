@@ -2,9 +2,9 @@
 Contributors: klangfarbe
 Tags: go, baduk, weiqi, sgf, kifu, goban, wgo.js, responsive
 Requires at least: 3.6
-Tested up to: 3.9.1
+Tested up to: 4.4
 License: MIT
-Stable tag: 0.4
+Stable tag: 0.5
 
 Display SGF files with a responsive layout on your WordPress site and access
 the European Go Database for player information.
@@ -31,6 +31,9 @@ actually used on a site. Nevertheless it is not possible to use both plugins
 in the same post.
 
 == Changelog ==
+
+= 0.5 =
+* Updated wgo.js library
 
 = 0.4 =
 * Added a link to the settings page on the WordPress plugin page

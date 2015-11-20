@@ -27,3 +27,23 @@ table.wgo-player-table {
 	margin-left: 1.2em;
 	margin-right: 0em;
 }
+
+/** Fixes for the worpress themes */
+.wgo-control-wrapper button,
+.wgo-control-wrapper button:active,
+.wgo-control-wrapper button:hover {
+	padding: 1px 6px !important;
+	color: black;
+	font-weight: normal;
+	background-color: rgba(255, 255, 255, 0.3) !important;
+	border: 1px solid rgba(190, 190, 190, 0.5) !important;
+}
+
+input[type="text"].wgo-player-mn-value  {
+	width: 100%;
+	padding: 1px;
+}
+
+.wgo-player-mn-wrapper {
+	width: 45px;
+}
