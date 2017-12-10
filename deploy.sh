@@ -46,7 +46,7 @@ CURRENTDIR=`pwd`
 
 # Check version in readme.txt is the same as plugin file
 NEWVERSION1=`grep "^Stable tag" readme.txt | awk -F' ' '{print $3}'`
-NEWVERSION2=`grep -E "^[[:space:]*]*Version" $MAINFILE | sed -e 's/.*Version:\s*//'`
+NEWVERSION2=`grep -E "^[[:space:]*]*Version" $MAINFILE | sed -e 's/.*Version: *//'`
 echo "readme version: $NEWVERSION1"
 echo "$MAINFILE version: $NEWVERSION2"
 
