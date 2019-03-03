@@ -2,12 +2,16 @@
 Contributors: klangfarbe
 Tags: go, baduk, weiqi, sgf, kifu, goban, wgo.js, responsive
 Requires at least: 4.0
-Tested up to: 4.9
+Tested up to: 5.1
 License: MIT
-Stable tag: 0.6
+Stable tag: 0.7
 
 Display SGF files with a responsive layout on your WordPress site and access
 the European Go Database for player information.
+
+**Important: This plugin is not maintained actively since I do not use
+WordPress anymore for any of my websites. Still it should be working and can
+be used as is.**
 
 == Description ==
 This plugin makes use of the great [wgo.js](http://wgo.waltheri.net) library and
@@ -15,7 +19,8 @@ adds two new shortcodes to WordPress which allows users to display SGF files and
 build player tables by querying the [European Go Database](http://europeangodatabase.eu).
 
 = Documentation =
-For the shortcode documentation and examples visit the [Plugin Homepage](http://guzumi.de/wgo-plugin)
+For the shortcode documentation and examples visit the
+[Git repository](https://github.com/klangfarbe/Go-for-WordPress) at github.
 
 == Installation ==
 Download the package and extract it to you WordPress plugin folder or use the
@@ -31,6 +36,9 @@ actually used on a site. Nevertheless it is not possible to use both plugins
 in the same post.
 
 == Changelog ==
+
+= 0.7 =
+* Updated readme and created readme.md with shortcode documentation
 
 = 0.6 =
 * Updated wgo.js library
